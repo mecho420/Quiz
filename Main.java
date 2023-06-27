@@ -32,11 +32,11 @@ public class Main {
                 points++;
                 System.out.println("Правилно, твоят резултат за сега е " + points);
             } else if (answer != 2) {
-                System.out.println("Грешно");
+                System.out.println("Грешно твоят резултат е " + points);
                 System.exit(0);
             }
 
-            mathList.add("Въпрос 1: Колко е 3 + 4 - 2 - 2 + 1 = ?, 1. три, 2. четири, 3. две, 4. едно");
+            mathList.add("Въпрос 2: Колко е 2 + 2 - 2 = ?, 1. четири, 2. едно, 3. две, 4. три");
             int mathCategoryIndex2 = 0;
             String mathQuestionsAndAnswers2 = mathList.get(mathCategoryIndex2);
             String[] mathData2 = mathQuestionsAndAnswers2.split(", ");
@@ -58,7 +58,7 @@ public class Main {
                 points++;
                 System.out.println("Правилно, твоят резултат за сега е " + points);
             } else if (answer != 3) {
-                System.out.println("Грешно");
+                System.out.println("Грешно твоят резултат е " + points);
                 System.exit(0);
             }
         } catch (Exception ex) {
