@@ -1,9 +1,6 @@
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
-import java.io.StringWriter;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
@@ -18,16 +15,19 @@ public class Main {
             while ((line = reader.readLine()) != null) {
                 stringBuilder.append(line);
                 stringBuilder.append("\n");
+                String csvContentMath = stringBuilder.toString();
+                String[] split = csvContentMath.split(",");
+                for (String index : split) {
+                    System.out.printf("%10s%n", index);
+                }
+                System.out.println();
+                String answer = scan.next();
+                if (answer == "четири") {
+                    System.out.println("Правилно!");
+                }
             }
-
-            reader.close();
-
-            String csvContent = stringBuilder.toString();
-            System.out.println(csvContent);
-
-            String[] split = csvContent.split(", ");
         } catch (Exception ex) {
-            System.out.println(ex);
+            System.out.println(ex.getMessage());
         }
     }
 
